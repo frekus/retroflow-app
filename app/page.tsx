@@ -230,21 +230,21 @@ export default function Home() {
                 name: "Claire Dawson",
                 role: "Chief Operating Officer",
                 company: "Thornbury Group",
-                avatar: "CD",
+                avatar: "https://i.pravatar.cc/100?img=9",
               },
               {
                 quote: "The colour-coded digest means my team knows in 10 seconds what needs attention. We spend standup solving problems instead of reporting numbers.",
                 name: "Daniel Eze",
                 role: "Head of Finance",
                 company: "Rova Capital",
-                avatar: "DE",
+                avatar: "https://i.pravatar.cc/100?img=22",
               },
               {
                 quote: "I set it up in an afternoon. Now every Monday our whole leadership team has the same view of the business before their first coffee. It's become non-negotiable.",
                 name: "Natalie Cross",
                 role: "Founder & CEO",
                 company: "Waypoint Ventures",
-                avatar: "NC",
+                avatar: "https://i.pravatar.cc/100?img=56",
               },
             ].map((t) => (
               <div key={t.name} className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col gap-6">
@@ -257,9 +257,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-                    {t.avatar}
-                  </div>
+                  <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
                     <p className="text-gray-500 text-xs">{t.role} · {t.company}</p>
